@@ -1,0 +1,33 @@
+import java.util.Scanner;
+/** 
+ * ACS-1903
+ * for Lab6 Q1
+ */
+public class ProvinceCode{
+    public static void main(String[] args){
+        Scanner kb = new Scanner(System.in);
+        System.out.println("Enter the province code:");
+        String code = kb.next().toUpperCase();
+        
+        String province="";
+        switch(code){
+            case "BC": province = "British Columbia";
+            break;
+            case "SK": province = "Saskatchewan";
+            break;
+            case "AB": province = "Alberta";
+            break;
+            case "MB": province = "Manitoba";
+            break;
+            case "ON": province = "Ontario";
+            break;
+            default: province = "unknown";
+        }
+        
+        if (!province.equals("unknown"))
+            System.out.println("The code " +code+ " stands for " +province);
+        else 
+            System.out.println("The code " +code+ " is not in the list");
+
+    }
+}
